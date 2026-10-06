@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="referrer" content="no-referrer" />
+
+    <meta name="viewport" content="width=device-width;" />
+
+    <meta name="format-detection" content="telephone=no" />
+
+    <meta name="color-scheme" content="light dark" />
+
+    <base target="_blank" />
+
+    <style>
+      form {
+        text-align: center;
+      }
+
+      fieldset {
+        width: fit-content;
+        margin: auto;
+      }
+
+      .monospace {
+        font-family: monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <form>
+        <fieldset>
+          <label>
+            cols
+            <input
+              type="number"
+              value="80"
+              min="1"
+              onchange="textarea.cols = this.value"
+            />
+          </label>
+
+          <label>
+            rows
+            <input
+              type="number"
+              value="24"
+              min="1"
+              onchange="textarea.rows = this.value"
+            />
+          </label>
+
+          <label>
+            <input
+              type="checkbox"
+              onchange="textarea.classList.toggle('monospace')"
+            />
+            monospace
+          </label>
+        </fieldset>
+
+        <div>
+          <textarea id="textarea" cols="80" rows="24"></textarea>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
